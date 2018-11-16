@@ -1,9 +1,15 @@
-import entities.Endereco;
+package entities;
+
+import java.util.ArrayList;
 
 public class PetShop {
 	private int id;
 	private String nomeShop;
 	private Endereco endereco;
+	private Site site;
+	private ArrayList<Produto> produtos;
+	private ArrayList<Fornecedor> fornecedores;
+	private ArrayList<Cliente> clientes;
 	
 	public int getId() {
 		return id;
@@ -74,6 +80,30 @@ public class PetShop {
 	public String toString() {
 		return "PetShop [id=" + id + ", nomeShop=" + nomeShop + ", endereco=" + endereco + ", Endereco=" + Endereco
 				+ "]";
+	}
+	public Site getSite() {
+		return site;
+	}
+	public void setSite(Site site) {
+		this.site = site;
+	}
+	public ArrayList<Produto> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(ArrayList<Produto> produtos) {
+		this.produtos = produtos;
+	}
+	public ArrayList<Cliente> getClientes() {
+		return clientes;
+	}
+	public void setClientes(ArrayList<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+	public ArrayList<Fornecedor> getFornecedores() {
+		return fornecedores;
+	}
+	public void setFornecedores(ArrayList<Fornecedor> fornecedores) {
+		this.fornecedores = fornecedores;
 	}
 
 	

@@ -1,9 +1,15 @@
 package entities;
 
 public class Animal {
+	
 	private int idAnim;
 	private String raca;
 	private int peso;
+	
+	private PetShop petShop;
+	
+	
+	
 	public int getIdAnim() {
 		return idAnim;
 	}
@@ -60,6 +66,12 @@ public class Animal {
 		} else if (!raca.equals(other.raca))
 			return false;
 		return true;
+	}
+	public PetShop getPetShop() {
+		return petShop;
+	}
+	public void setPetShop(PetShop petShop) {
+		this.petShop = petShop;
 	}
 	
 
