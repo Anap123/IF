@@ -1,12 +1,16 @@
 package entities;
 
-import java.util.ArrayList;
+import java.util.Set;
+
+import javax.persistence.Entity;
+
+@Entity
 
 public class Site {
 
 	private int idSite;
 	private String paginas;
-	private ArrayList<Cliente> clientes;
+	private Set<Cliente> clientes;
 
 	public int getIdSite() {
 		return idSite;
@@ -63,12 +67,16 @@ public class Site {
 		return true;
 	}
 
-	public ArrayList<Cliente> getClientes() {
+	public Set<Cliente> getClientes() {
 		return clientes;
 	}
-
-	public void setClientes(ArrayList<Cliente> clientes) {
-		this.clientes = clientes;
+	
+	
+	public void SetClientes (Set <Cliente> Cliente){
+		this.clientes = Cliente;
 	}
-
+	
 }
+	
+	
+

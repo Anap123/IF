@@ -1,15 +1,19 @@
 package entities;
 
-import java.util.ArrayList;
+import java.util.Set;
+
+import javax.persistence.Entity;
+@Entity
 
 public class Cliente {
 	private int idCliente;
 	private String nome;
-	
-	private ArrayList<Animal> animais;
+	private Set<Animal> animais;
 	private String Site;
-	private ArrayList <Produto> produtoss;
+	private Set <Produto> produtoss;
 	
+	
+
 	
 	public int getIdCliente() {
 		return idCliente;
@@ -58,10 +62,10 @@ public class Cliente {
 			return false;
 		return true;
 	}
-	public ArrayList<Animal> getAnimais() {
+	public Set<Animal> getAnimais() {
 		return animais;
 	}
-	public void setAnimais(ArrayList<Animal> animais) {
+	public void setAnimais(Set<Animal> animais) {
 		this.animais = animais;
 	}
 	public String getSite() {
@@ -70,10 +74,10 @@ public class Cliente {
 	public void setSite(String site) {
 		Site = site;
 	}
-	public ArrayList <Produto> getProdutoss() {
+	public Set <Produto> getProdutoss() {
 		return produtoss;
 	}
-	public void setProdutoss(ArrayList <Produto> produtoss) {
+	public void setProdutoss(Set <Produto> produtoss) {
 		this.produtoss = produtoss;
 	}
 	

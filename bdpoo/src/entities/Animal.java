@@ -8,8 +8,6 @@ public class Animal {
 	
 	private PetShop petShop;
 	
-	
-	
 	public int getIdAnim() {
 		return idAnim;
 	}

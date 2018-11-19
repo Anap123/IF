@@ -1,6 +1,6 @@
 package entities;
 
-import java.util.ArrayList;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,9 +13,9 @@ public class PetShop {
 	private String nomeShop;
 	private Endereco endereco;
 	private Site site;
-	private ArrayList<Produto> produtos;
-	private ArrayList<Fornecedor> fornecedores;
-	private ArrayList<Cliente> clientes;
+	private Set<Produto> produtos;
+	private Set<Fornecedor> fornecedores;
+	private Set<Cliente> clientes;
 
 	@Column(name = "id_pet")
 	private Long id;
@@ -108,28 +108,29 @@ public class PetShop {
 		this.site = site;
 	}
 
-	public ArrayList<Produto> getProdutos() {
+	public Set<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public void setProdutos(ArrayList<Produto> produtos) {
+	public void setProdutos(Set<Produto> produtos) {
 		this.produtos = produtos;
 	}
 
-	public ArrayList<Cliente> getClientes() {
+	public Set<Cliente> getClientes() {
 		return clientes;
 	}
 
-	public void setClientes(ArrayList<Cliente> clientes) {
+	public void setClientes(Set<Cliente> clientes) {
 		this.clientes = clientes;
 	}
 
-	public ArrayList<Fornecedor> getFornecedores() {
+	public Set<Fornecedor> getFornecedores() {
 		return fornecedores;
 	}
 
-	public void setFornecedores(ArrayList<Fornecedor> fornecedores) {
+	public void setFornecedores(Set<Fornecedor> fornecedores) {
 		this.fornecedores = fornecedores;
 	}
 
 }
+
