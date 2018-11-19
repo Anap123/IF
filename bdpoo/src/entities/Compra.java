@@ -38,8 +38,5 @@ public class Compra {
 	}
 	public void setSite(String site) {
 		this.site = site;
-	}
-	
-	
-
+	}	
 }
