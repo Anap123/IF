@@ -11,6 +11,14 @@ public class Fornecedor {
 	
 
 	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((enderecoForn == null) ? 0 : enderecoForn.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -34,6 +42,19 @@ public class Fornecedor {
 	}
 	public void setEnderecoForn(Endereco enderecoForn) {
 		this.enderecoForn = enderecoForn;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Endereco getEnderecoForn() {
+		return enderecoForn;
+	}
+	@Override
+	public String toString() {
+		return "Fornecedor [id=" + id + ", enderecoForn=" + enderecoForn + "]";
 	}
 
 }
