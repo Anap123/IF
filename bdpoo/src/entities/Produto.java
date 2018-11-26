@@ -1,15 +1,13 @@
 package entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Produto {
+	@Id
 	private int id_p;
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id_p;
-		result = prime * result + validade;
-		return result;
-	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -31,23 +29,5 @@ public class Produto {
 		this.validade = validade;
 	}
 	private int validade;
-	public int getId_p() {
-		return id_p;
-	}
-	public void setId_p(int id_p) {
-		this.id_p = id_p;
-	}
-	public int getValidade() {
-		return validade;
-	}
-	public void setValidade(int validade) {
-		this.validade = validade;
-	}
-	@Override
-	public String toString() {
-		return "Produto [id_p=" + id_p + ", validade=" + validade + ", getId_p()=" + getId_p() + ", getValidade()="
-				+ getValidade() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
-	}
-
+	
 }
