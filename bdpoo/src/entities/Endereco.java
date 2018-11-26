@@ -1,47 +1,22 @@
 package entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Endereco {
+	@Id
 	private String rua;
 	private String bairro;
 	private int numero;
 	
-	public String getRua() {
-		return rua;
-	}
-	public void setRua(String rua) {
-		this.rua = rua;
-	}
-	public String getBairro() {
-		return bairro;
-	}
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-	public int getNumero() {
-		return numero;
-	}
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-	@Override
-	public String toString() {
-		return "Endereco [rua=" + rua + ", bairro=" + bairro + ", numero=" + numero + "]";
-	}
 	public Endereco(String rua, String bairro, int numero) {
 		super();
 		this.rua = rua;
 		this.bairro = bairro;
 		this.numero = numero;
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
-		result = prime * result + numero;
-		result = prime * result + ((rua == null) ? 0 : rua.hashCode());
-		return result;
-	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
