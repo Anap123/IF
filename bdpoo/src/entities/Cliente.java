@@ -2,24 +2,33 @@ package entities;
 
 import java.util.Set;
 
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
 @Entity
 public class Cliente {
 	@Id
 	private Long idCliente;
 	private String nome;
+	@OneToMany
+	@JoinColumn(name = "id_dono")
 	private Set<Animal> animais;
 	private String Site;
-	private Set <Produto> produtoss;
+	@OneToMany
+	@JoinColumn(name= "produtos")
+	private Set produtoss;
 	
-	
+
 	@Override
 	public String toString() {
 		return "Cliente [idCliente=" + idCliente + ", nome=" + nome + ", animais=" + animais + ", Site=" + Site
 				+ ", produtoss=" + produtoss + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -31,6 +40,7 @@ public class Cliente {
 		result = prime * result + ((produtoss == null) ? 0 : produtoss.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -67,37 +77,45 @@ public class Cliente {
 			return false;
 		return true;
 	}
+
 	public Long getIdCliente() {
 		return idCliente;
 	}
+
 	public void setIdCliente(Long idCliente) {
 		this.idCliente = idCliente;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public Set<Animal> getAnimais() {
 		return animais;
 	}
+
 	public void setAnimais(Set<Animal> animais) {
 		this.animais = animais;
 	}
+
 	public String getSite() {
 		return Site;
 	}
+
 	public void setSite(String site) {
 		Site = site;
 	}
-	public Set <Produto> getProdutoss() {
+
+	public Set<Produto> getProdutoss() {
 		return produtoss;
 	}
-	public void setProdutoss(Set <Produto> produtoss) {
+
+	public void setProdutoss(Set<Produto> produtoss) {
 		this.produtoss = produtoss;
 	}
-	
-	
 
 }

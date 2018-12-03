@@ -2,14 +2,13 @@ package entities;
 
 import java.util.Set;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class PetShop {
 	@Id
-	private int id1;
+	private Long id1;
 	private String nomeShop;
 	private Endereco endereco;
 	private Site site;
@@ -18,11 +17,11 @@ public class PetShop {
 	private Set<Cliente> clientes;
 	
 
-	public int getId1() {
+	public Long getId1() {
 		return id1;
 	}
 
-	public void setId1(int id1) {
+	public void setId1(Long id1) {
 		this.id1 = id1;
 	}
 
@@ -34,7 +33,7 @@ public class PetShop {
 		this.nomeShop = nomeShop;
 	}
 
-	public Endereco getEndereco() {
+	public Endereco getEndereco1() {
 		return endereco;
 	}
 
@@ -73,15 +72,6 @@ public class PetShop {
 	public void setClientes(Set<Cliente> clientes) {
 		this.clientes = clientes;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getEndereco() {
 		return Endereco;
 	}
@@ -90,16 +80,6 @@ public class PetShop {
 		Endereco = endereco;
 	}
 
-	@Column(name = "id_pet")
-	private Long id;
-
-	public PetShop(int id, String nomeShop, Endereco endereco, String endereco2) {
-		super();
-		this.id1 = id;
-		this.nomeShop = nomeShop;
-		this.endereco = endereco;
-		Endereco = endereco2;
-	}
 
 	private String Endereco;
 
