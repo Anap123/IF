@@ -1,4 +1,4 @@
-package entities;
+ package entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -50,5 +50,6 @@ public class Produto {
 	public void setValidade(int validade) {
 		this.validade = validade;
 	}
+	
 	
 }

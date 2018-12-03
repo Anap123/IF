@@ -10,6 +10,8 @@ public class Endereco {
 	private String bairro;
 	private int numero;
 	
+	
+	
 	@Override
 	public String toString() {
 		return "Endereco [rua=" + rua + ", bairro=" + bairro + ", numero=" + numero + "]";

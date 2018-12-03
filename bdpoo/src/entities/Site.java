@@ -47,6 +47,67 @@ public class Site {
 	public void SetClientes (Set <Cliente> Cliente){
 		this.clientes = Cliente;
 	}
+
+	public int getIdSite() {
+		return idSite;
+	}
+
+	public void setIdSite(int idSite) {
+		this.idSite = idSite;
+	}
+
+	public String getPaginas() {
+		return paginas;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	public void setPaginas(String paginas) {
+		this.paginas = paginas;
+	}
+
+	public void setClientes(Set<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+	
 	
 }
 	
