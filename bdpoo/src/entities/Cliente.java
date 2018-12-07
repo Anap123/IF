@@ -20,7 +20,7 @@ public class Cliente {
 	private String Site;
 	@OneToMany
 	@JoinColumn(name= "produtos")
-	private Set produtoss;
+	private String produtoss;
 	
 
 	@Override
@@ -110,11 +110,11 @@ public class Cliente {
 		Site = site;
 	}
 
-	public Set<Produto> getProdutoss() {
+	public String getProdutoss() {
 		return produtoss;
 	}
 
-	public void setProdutoss(Set<Produto> produtoss) {
+	public void setProdutoss(String produtoss) {
 		this.produtoss = produtoss;
 	}
 
