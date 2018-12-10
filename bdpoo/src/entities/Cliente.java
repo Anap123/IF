@@ -18,9 +18,9 @@ public class Cliente {
 	@JoinColumn(name = "id_dono")
 	private Set<Animal> animais;
 	private String Site;
-	@OneToMany
-	@JoinColumn(name= "produtos")
-	private String produtoss;
+	@ManyToMany
+	@JoinTable
+	private Set<Produto> produtoss;
 	
 
 	@Override
@@ -110,12 +110,13 @@ public class Cliente {
 		Site = site;
 	}
 
-	public String getProdutoss() {
+	public Set<Produto> getProdutoss() {
 		return produtoss;
 	}
 
-	public void setProdutoss(String produtoss) {
+	public void setProdutoss(Set<Produto> produtoss) {
 		this.produtoss = produtoss;
 	}
 
 }
+

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
@@ -19,7 +20,8 @@ public class Compra {
 	@OneToMany
 	@JoinColumn(name = "produtoscomp")
 	private String site;
-	@ManyToMany
+
+	
 
 	public Long getIdComp() {
 		return idComp;

@@ -2,16 +2,23 @@ package entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Endereco {
 	@Id
+	@ManyToMany
+	@JoinTable
 	private String rua;
 	private String bairro;
+	@OneToMany
+	@JoinColumn(name = "Numero")
 	private int numero;
-	
-	
-	
+
+
 	@Override
 	public String toString() {
 		return "Endereco [rua=" + rua + ", bairro=" + bairro + ", numero=" + numero + "]";

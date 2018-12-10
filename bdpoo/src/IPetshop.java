@@ -10,5 +10,4 @@ public interface IPetshop {
 	public void Cliente(int idCliente, String nome);
 	public void Site(int idSite, String paginas);
 	
-	
 }

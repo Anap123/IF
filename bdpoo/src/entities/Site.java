@@ -4,6 +4,10 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 
@@ -11,12 +15,16 @@ public class Site {
 	@Id
 
 	private int idSite;
+	@OneToMany
+	@JoinColumn(name = "idSite")
 	private String paginas;
+	@ManyToMany
+	@JoinTable
 	private Set<Cliente> clientes;
 
 	public Site(int idSite, String paginas) {
 		super();
-		this.idSite = idSite;
+		this.idSite = idSite;	
 		this.paginas = paginas;
 	}
 

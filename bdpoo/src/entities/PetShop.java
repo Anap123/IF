@@ -4,17 +4,32 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class PetShop {
 	@Id
+	
+	@OneToMany
+	@JoinColumn(name = "id1")
 	private Long id1;
 	private String nomeShop;
+	@OneToMany
+	@JoinColumn(name = "endereco")
 	private Endereco endereco;
+	@OneToMany
+	@JoinColumn(name = "site")
 	private Site site;
 	private Set<Produto> produtos;
 	private Set<Fornecedor> fornecedores;
+	@ManyToMany
+	@JoinTable
 	private Set<Cliente> clientes;
+	
+	
 	
 
 	public Long getId1() {

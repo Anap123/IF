@@ -2,11 +2,17 @@
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Produto {
 	@Id
+	
+	@OneToMany
+	@JoinColumn(name = "id_p")
 	private int id_p;
+
 	
 	@Override
 	public int hashCode() {

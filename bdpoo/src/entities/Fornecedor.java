@@ -2,13 +2,22 @@
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Fornecedor {
 	@Id
-	private int id;
-	private Endereco enderecoForn;
 	
+	@OneToMany
+	@JoinColumn(name = "id")
+	private int id;
+	@ManyToMany
+	@JoinTable
+	private Endereco enderecoForn;
+
 
 	@Override
 	public int hashCode() {

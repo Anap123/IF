@@ -2,13 +2,23 @@ package entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Animal {
 	@Id
+	@OneToMany
+	@JoinColumn(name = "idAdimin")
 	private Long idAnim;
 	private String raca;
+	@ManyToMany
+	@JoinTable
 	private int peso;
+	
+	
 
 	public Long getIdAnim() {
 		return idAnim;
